@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MovieList from '/workspaces/si579/src/Components/MovieList.js'; 
 import {movieChoices} from '/workspaces/si579/src/util/MovieSelection.js';
+import FunFacts from '/workspaces/si579/src/Components/FunFacts.js';
 import './App.css';
 
 function App() {

@@ -36,6 +36,52 @@ const MovieList = ({ movies }) => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<span>▼</span>}
+                aria-controls={`panel-${movie.imdbID}-content`}
+                id={`panel-${movie.imdbID}-header`}
+              >
+                <Typography>{movie.Title} Creator Biography</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  <p>Year: {movie.Year}</p>
+                  <p>Type: {movie.Type}</p>
+                  <p>IMDb ID: {movie.imdbID}</p>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<span>▼</span>}
+                aria-controls={`panel-${movie.imdbID}-content`}
+                id={`panel-${movie.imdbID}-header`}
+              >
+                <Typography>{movie.Title} Film Inspiration</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  <p>Year: {movie.Year}</p>
+                  <p>Type: {movie.Type}</p>
+                  <p>IMDb ID: {movie.imdbID}</p>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<span>▼</span>}
+                aria-controls={`panel-${movie.imdbID}-content`}
+                id={`panel-${movie.imdbID}-header`}
+              >
+                <Typography>{movie.Title} Fun Facts</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                <p>{movie.location}</p>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
           </div>
         </div>
       ))}
