@@ -1,5 +1,4 @@
-// API FETCH
 export const generateApiUrl = (title) => {
     const encodedTitle = encodeURIComponent(title).replace(/%20/g, '+');
-    return `https://www.omdbapi.com/?t=${encodedTitle}&apikey=e304f6a2`;
+    return `http://img.omdbapi.com/?t=${encodedTitle}&apikey=e304f6a2`;
 };

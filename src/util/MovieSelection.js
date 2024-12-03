@@ -32,8 +32,8 @@ export const movieChoices = [
         imdbID: "tt01196",
         Type: "movie",
         Inspiration: "During the production phase, Hayao Miyazaki and his artists traveled to Sweden to research the film. The photographs they took of Stockholm and Visby formed the basis of the fictional city of Koriko. The city also contains elements of Lisbon, Paris, San Francisco, and Milan.",
-        Poster: ""
-      }
+        Poster: "https://cdn.shopify.com/s/files/1/1057/4964/files/Kikis-Delivery-Service-Vintage-Movie-Poster-Original-Japanese-1-panel-20x29_259x.jpg?v=1701925390"
+      },
       {
         Title: "Ponyo",
         imdbID: "tt0874766",
