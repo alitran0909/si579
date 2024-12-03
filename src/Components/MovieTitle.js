@@ -1,7 +1,7 @@
 import React from 'react';
 
-const MovieTitle = ({ title }) => {
-  return <h1>{title}</h1>;
+const MovieTitle = () => {
+  return <h1 style={{ marginLeft: '20px' }}>Studio Ghibli Films</h1>;
 };
 
 export default MovieTitle;

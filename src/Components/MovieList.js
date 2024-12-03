@@ -13,26 +13,31 @@ const MovieList = ({ movies }) => {
           flexDirection: 'row',
           alignItems: 'flex-start',
           marginBottom: '20px',
-          width: '100%'
+          marginLeft: '20px',
+          width: '70%'
         }}>
           <div style={{ flexBasis: '30%', marginRight: '20px' }}>
             <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>{movie.Title}</h2>
             <img src={movie.Poster} alt={movie.Title} style={{ width: '100%', height: 'auto' }} />
           </div>
-          <div style={{ flexBasis: '70%' }}>
+      
+          <div style={{ flexBasis: '70%', marginTop: '90px' }}>
+          <div className="totoro-metadata">
+            <h2>Film Information</h2>
+            <p><strong>Release Year:</strong> {movie.Year}</p>
+            <p><strong>Creator:</strong> {movie.Creator}</p>
+             </div>
             <Accordion>
               <AccordionSummary
                 expandIcon={<span>▼</span>}
                 aria-controls={`panel-${movie.imdbID}-content`}
                 id={`panel-${movie.imdbID}-header`}
               >
-                <Typography>{movie.Title} Details</Typography>
+                <Typography>{movie.Title} Description</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  <p>Year: {movie.Year}</p>
-                  <p>Type: {movie.Type}</p>
-                  <p>IMDb ID: {movie.imdbID}</p>
+                  <p>{movie.Description}</p>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -46,9 +51,7 @@ const MovieList = ({ movies }) => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  <p>Year: {movie.Year}</p>
-                  <p>Type: {movie.Type}</p>
-                  <p>IMDb ID: {movie.imdbID}</p>
+                  <p>{movie.Biography}</p>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -62,9 +65,7 @@ const MovieList = ({ movies }) => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  <p>Year: {movie.Year}</p>
-                  <p>Type: {movie.Type}</p>
-                  <p>IMDb ID: {movie.imdbID}</p>
+                  <p>{movie.Inspiration}</p>
                 </Typography>
               </AccordionDetails>
             </Accordion>
