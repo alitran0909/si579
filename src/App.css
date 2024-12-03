@@ -27,10 +27,16 @@
 .App-link {
   color: #61dafb;
 }
-
 body {
-  background-color: #B2E0B2; /* Pastel green */
-  margin: 0; /* Remove default margin */
+  background: linear-gradient(to bottom, #FFB6C1, #A3C1DA); /* Pastel pink to pastel blue gradient */
+  min-height: 100vh; /* Ensures the gradient covers the full height of the viewport */
+  margin: 0; /* Removes default margin */
+}
+
+header {
+  background: linear-gradient(to right, #FFB6C1, #A3C1DA); /* Pastel pink to pastel blue */
+  padding: 20px; /* Padding for spacing */
+  text-align: center; /* Center the text */
 }
 
 @keyframes App-logo-spin {
