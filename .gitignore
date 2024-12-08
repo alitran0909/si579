@@ -9,6 +9,7 @@
 /coverage
 
 # production
+/src/components/FetchApi.js
 /build
 
 # misc
