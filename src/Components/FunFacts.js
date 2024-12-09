@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react';
-{/*The component that allows users to click throuhg various fun facts from the API*/}
+
+/**
+ * The component that allows users to click through various fun facts from the API
+ * @param {Object} props - The component props
+ * @param {string} props.url - The URL to fetch fun facts data
+ * @returns {JSX.Element} The rendered FunFacts component
+ */
 const FunFacts = ({ url }) => {
     const [factData, setFactData] = useState(null);
-    {/*Starts off displaying the Award fun fact always*/}
+    // Starts off displaying the Award fun fact always
     const [currentDisplay, setCurrentDisplay] = useState('awards');
     const [error, setError] = useState(null);
 
-    {/*Fetches API within this component*/}
+    // Fetches API within this component
     useEffect(() => {
+        /**
+         * Fetches fun facts data from the API
+         * @async
+         */
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
@@ -22,11 +32,12 @@ const FunFacts = ({ url }) => {
         fetchData();
     }, [url]);
 
-
-    {/*Function allows for the various facts to be cycled through when the user clicks the button*/}
+    /**
+     * Function allows for the various facts to be cycled through when the user clicks the button
+     */
     const cycleDisplay = () => {
         setCurrentDisplay(current => {
-            {/*The cases that are allowed for the user click*/}
+            // The cases that are allowed for the user click
             switch(current) {
                 case 'awards': return 'language';
                 case 'language': return 'country';
@@ -36,11 +47,15 @@ const FunFacts = ({ url }) => {
         });
     };
 
+    /**
+     * Renders the current display based on the selected fact type
+     * @returns {JSX.Element|null} The JSX for the current fact display or null
+     */
     const renderCurrentDisplay = () => {
-        {/*Safety check to make sure a deadend isn't being accessed*/}
+        // Safety check to make sure a deadend isn't being accessed
         if (!factData) return null;
 
-        {/*Cycles through the varioius cases that are allowed*/}
+        // Cycles through the various cases that are allowed
         switch(currentDisplay) {
             case 'awards':
                 return (
@@ -76,7 +91,7 @@ const FunFacts = ({ url }) => {
         return <p>Loading...</p>;
     }
 
-    {/*Returns the button with the proper functionality of cycling through the facts by utilizing onClick*/}
+    // Returns the button with the proper functionality of cycling through the facts by utilizing onClick
     return (
         <div>
             <button onClick={cycleDisplay}>Show Next Information</button>
