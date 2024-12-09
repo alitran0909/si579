@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Tabs, Tab, Box } from '@mui/material';
 import { generateApiUrl } from '/workspaces/si579/src/Components/FetchApi.js';
 
+{/*Utilizes styling of toggle bar from MUI kit*/}
 function CustomTabPanel({ children, value, index }) {
   return (
     <div role="tabpanel" hidden={value !== index}>
@@ -14,6 +15,7 @@ export default function Reviews({ movieTitle }) {
   const [value, setValue] = useState(0);
   const [movieData, setMovieData] = useState(null);
 
+  {/*Fetches API information for reviews*/}
   useEffect(() => {
     const fetchMovieData = async () => {
       try {
@@ -36,10 +38,13 @@ export default function Reviews({ movieTitle }) {
     setValue(newValue);
   };
 
+  {/*Handles the specific Rotten Tomatoes review fetch as it is nested*/}
   const getRatingValue = (source) => {
     return movieData?.Ratings.find(rating => rating.Source === source)?.Value || "N/A";
   };
 
+
+  {/*Creates toggle bar utilizing the movie review information that was fetched*/}
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

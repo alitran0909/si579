@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
 import MovieList from '/workspaces/si579/src/Components/MovieList.js'; 
 import {movieChoices} from '/workspaces/si579/src/util/MovieSelection.js';
-import FunFacts from '/workspaces/si579/src/Components/FunFacts.js';
 import MovieTitle from '/workspaces/si579/src/Components/MovieTitle.js';
 import './App.css';
-
 function App() {
-  const [movies, setMovies] = useState(movieChoices)
+  {/*Hook state of containing the movie information*/}
+
   return (
     <div className="container-fluid movie-app">
       <div className="row justify-content-center">
         <div className="col-12 text-center mb-4">
-        <MovieTitle/>
+          {/*showcases the header of various moving images of different films and overarching website name*/}
+          <MovieTitle />
         </div>
       </div>
       <div className="row justify-content-center mx-3">
-        <MovieList movies={movies} />
+        {/*showcases each specific film with it's information by going through the given movie list created*/}
+        <MovieList movies={movieChoices} />
       </div>
     </div>
   );

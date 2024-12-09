@@ -4,9 +4,11 @@ import sGif from '/workspaces/si579/src/spirtedawaywalk.gif'
 import princess from '/workspaces/si579/src/princesswalking.gif'
 import howl from '/workspaces/si579/src/howlswalking.gif'
 import ponyo from '/workspaces/si579/src/ponyorunning.gif'
+import kiki from '/workspaces/si579/src/kikiflying.gif'
 
 
 function App() {
+  {/*Styles the header to  contain the moving gifs of the film*/}
   return (
     <div>
      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px' }}>
@@ -15,6 +17,7 @@ function App() {
         <img src={sGif} alt="Spirited Away Walk" className="gif" style={{ width: '150px', height: 'auto', margin: '10px' }} />
         <img src={princess} alt="Princess Walking" className="gif" style={{ width: '150px', height: 'auto', margin: '10px' }} />
         <img src={howl} alt="Howl's Walking" className="gif" style={{ width: '150px', height: 'auto', margin: '10px' }} />
+        <img src={kiki} alt="Ponyo Running" className="gif" style={{ width: '150px', height: 'auto', margin: '10px' }} />
         <img src={ponyo} alt="Ponyo Running" className="gif" style={{ width: '150px', height: 'auto', margin: '10px' }} />
       </header>
     </div>
